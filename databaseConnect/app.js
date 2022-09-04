@@ -103,20 +103,8 @@ app.post("/forgot-password", async (req, res) => {
       expiresIn: "5m",
     });
     const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
-    var transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "adarsh438tcsckandivali@gmail.com",
-        pass: "rmdklolcsmswvyfw",
-      },
-    });
+    
 
-    var mailOptions = {
-      from: "youremail@gmail.com",
-      to: "thedebugarena@gmail.com",
-      subject: "Password Reset",
-      text: link,
-    };
 
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
