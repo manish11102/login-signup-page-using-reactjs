@@ -30,8 +30,8 @@ export default class UserDetails extends Component {
     return (
       <div>
         
-        Name<h1>{this.state.userData.fname}</h1>
-        Email <h1>{this.state.userData.email}</h1>
+        Name: <h1>{this.state.userData.fname}</h1>
+        Email:  <h1>{this.state.userData.email}</h1>
         <div className="d-grid">
           
         </div>
